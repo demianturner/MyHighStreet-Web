@@ -1,0 +1,11 @@
+/* Forcing vertical scrollbars is not needed in IE (only for Firefox/Netscape/Safari) */
+html { height: auto; margin-bottom: 0; }
+
+body { position: relative; }  /* Essential in IE7 for correct layout scaling ... */
+* html body { position: static; }  /* ... but not for IE5.x and IE6 */
+
+.c50l, .c33l, .c50r, .c33r { display: inline; }
+
+#about p {
+    font-size: 1.4em;
+}

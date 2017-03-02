@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+    <title>My High Street</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="keywords" content="my high street, mhs, high street, brand, UK, UK brands, shopping" />
+    <meta name="description" content="MyHighStreet is an app for the iPhone that helps UK residents locate their favourite brands and retailers based on current location" />
+    <meta name="rating" content="General" />
+    <meta name="copyright" content="Copyright (c) 2009 Seagull Systems Ltd." />
+
+    <style type="text/css">
+        /* Defaults */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Tools */
+        .hideme {
+            position: absolute;
+            left: -1000em; /* LTR */
+            top: -1000em;
+        }
+        .subcolumns { width: 100%; overflow: hidden; }
+        .c50l, .c33l {float: left; }
+        .c50r, .c33r {float: right; margin-left: -5px; }
+        .c33l, .c33r { width: 33.333%; }
+        .c50l, .c50r { width: 50%; }
+
+        /* Main */
+        html * { font-size: 100.01%; }
+        body {
+            background: #f7f8f8 url(images/bg_main.gif) repeat-x left top;
+            color: #333;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 75%;
+        }
+        h1, h2 {
+            font-family: Helvetica, Arial, sans-serif;
+            color: white;
+        }
+        h2 {
+            margin-bottom: 1em;
+            font-size: 1.5em;
+        }
+        a {
+            color: #0082c5;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+
+        /* Layout */
+        #page {
+        }
+        .inner {
+            margin: 0 auto;
+            width: 980px;
+        }
+
+        /* Header */
+        #header {
+            position: relative;
+            height: 346px;
+        }
+            #header h1 {
+                position: absolute;
+                left: 40px;
+                top: 22px;
+                width: 165px;
+                height: 171px;
+                background: url(images/logo.jpg) no-repeat left top;
+            }
+            #header .appstore {
+                position: absolute;
+                left: 40px;
+                bottom: 22px;
+            }
+            #header .city {
+                position: absolute;
+                left: 35px;
+                top: 193px;
+                width: 375px;
+                height: 40px;
+                background: url(images/city.jpg) no-repeat left top;
+            }
+            #header .iphones {
+                position: absolute;
+                right: 60px;
+                top: 135px;
+            }
+            #header .promo {
+                z-index: 10;
+                position: absolute;
+                right: 135px;
+                top: 33px;
+            }
+
+        /* Layout images */
+        .appstore {
+            width: 209px;
+            height: 71px;
+            background: url(images/appstore.gif) no-repeat left top;
+        }
+        .iphones {
+            width: 480px;
+            height: 393px;
+            background: url(images/iphones.gif) no-repeat left top;
+        }
+        .promo {
+            width: 154px;
+            height: 153px;
+            background: url(images/free_during_april.gif) no-repeat left top;
+        }
+
+        /* About */
+        #about {
+            height: 270px;
+            overflow: hidden;
+            background: #f0f0f0 url(images/bg_about_m.gif) repeat-x left bottom;
+        }
+            #about .inner {
+                background: url(images/arrow_bottom.gif) no-repeat 52px 0;
+            }
+            #about p {
+                padding: 0 40px;
+                font-size: 1.5em;
+                line-height: 1.4em;
+                color: #232323;
+            }
+                #about .inner p.intro {
+                    padding: 35px 555px 10px 40px;
+                }
+
+        /* Features */
+        #features {
+            background-color: #008ed4;
+        }
+            #features .inner {
+                width: 900px;
+                padding: 25px 40px 20px;
+            }
+            #features ul {
+                list-style: none;
+                color: white;
+                font-size: 1.4em;
+                line-height: 1.3em;
+            }
+            #features ul.secondary {
+                margin-left: 30px;
+            }
+                #features ul li {
+                    margin-bottom: 0.75em;
+                    padding-left: 30px;
+                    background: url(images/icon_tick.gif) no-repeat left 0;
+                }
+
+        /* Info */
+        #info .inner, #footer .inner {
+            width: 870px;
+            padding: 30px 75px 30px 45px;
+        }
+        #info h2, #info p, #footer p {
+            margin-right: 35px;
+        }
+        #info h2 {
+            color: #53aa35;
+        }
+        #info p {
+            margin-bottom: 1.2em;
+            line-height: 1.3em;
+        }
+            #info p strong {
+                line-height: 1.3em;
+                font-size: 1.2em;
+            }
+
+        /* Footer */
+        #footer .bookmark {
+            text-align: right;
+        }
+    </style>
+
+    <!-- Thickbox -->
+    <!--script src="thickbox/jquery.js" type="text/javascript"></script>
+    <script src="thickbox/thickbox.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="thickbox/thickbox.css" /-->
+
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="css/main_patches.css" />
+    <![endif]-->
+</head>
+<body>
+
+    <!--div id="underapproval" style="display: none;">
+        <p>
+            Still waiting for approval from the AppStore,
+            it's taking longer than expected, please check back tomorrow.
+        </p>
+    </div-->
+
+    <div id="page">
+
+        <!-- Banner -->
+        <div id="header" class="inner">
+            <h1><span class="hideme">My High Street</span></h1>
+            <!--a class="appstore thickbox" href="#TB_inline?height=100&width=300&inlineId=underapproval"-->
+			<a class="appstore" href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=312422022&mt=8">
+                <span class="hideme">Available on the iPhone</span></a>
+            <!--div class="promo">
+                <p class="hideme">Introductory offer - <strong>free during April</strong></p>
+            </div-->
+            <img class="iphones" src="images/iphones.jpg" alt="" />
+            <div class="city"></div>
+        </div>
+
+        <!-- About -->
+        <div id="about">
+            <div class="inner">
+                <p class="intro">
+                    <strong>My High Street is a new app for the iPhone that helps UK residents locate their favourite brands and retailers based on current location.  Finding the nearest Boots or H+M between meetings has never been easier!</strong>
+                </p>
+                <p>
+                    <strong>Simply use the iPhone to select your favourite retailer from a list of categories, click the locate button and you will be  given a map with directions straight to the closest branch near you.</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div id="features">
+            <div class="inner">
+                <h2>Features</h2>
+                <div class="subcolumns">
+                    <div class="c50l">
+                        <ul>
+                            <li>finds you the retailer's phone number, website and all contact details</li>
+                            <li>shows you directions how to get to the shop</li>
+                        </ul>
+                    </div>
+                    <div class="c50r">
+                        <ul class="secondary">
+                            <li>and lists all similar retailers in your vicinity.</li>
+                            <li>you can even use the StreetView feature to preview the location before you arrive.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information -->
+        <div id="info">
+            <div class="inner">
+                <div class="subcolumns">
+                    <div class="c33l">
+                        <h2>About the author</h2>
+                        <p>
+                            <strong>My High Street was developed by <a href="http://seagullsystems.com">Seagull Systems</a>, a software development company with a history of success stories.</strong>
+                        </p>
+                        <p>
+                            We built sites like <a href="http://kindo.com">Kindo</a>, the family oriented social network; Babyfy, a baby reviews site for parents, and <a href="http://artflock.com">Artflock</a>, online creative community for buying and selling art.
+                        </p>
+                    </div>
+                    <div class="c33l">
+                        <h2>&nbsp;</h2>
+                        <p><strong>My High Street was designed by <a href="http://thenobleunion.com">The Noble Union</a>, a design company based in London.</strong></p>
+                        <p>Specialising in design and usability, we’ve designed effective websites and user interfaces for many startups.</p>
+                        <p>Oh, and, we love what we do.</p>
+                    </div>
+                    <div class="c33r">
+                        <h2>Need more info?</h2>
+                        <p>
+                            <strong>Just send us an <a href="mailto:support@myhighstreetapp.co.uk">email</a> and we'll be happy to answer any of your questions.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="inner">
+                <div class="subcolumns">
+                    <div class="c33l">
+                        Copyright &copy; 2003-2009 <a href="http://seagullsystems.com">Seagull Systems Ltd</a>
+                    </div>
+                    <div class="c33l">
+                        Lovingly designed by <a href="http://thenobleunion.com">The Noble Union</a>
+                    </div>
+                    <div class="c33r bookmark">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- Page -->
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-435749-8");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+	<script type="text/javascript">
+	  var uservoiceJsHost = ("https:" == document.location.protocol) ? "https://uservoice.com" : "http://cdn.uservoice.com";
+	  document.write(unescape("%3Cscript src='" + uservoiceJsHost + "/javascripts/widgets/tab.js' type='text/javascript'%3E%3C/script%3E"))
+	</script>
+	<script type="text/javascript">
+	UserVoice.Tab.show({ 
+	  key: 'myhighstreet',
+	  host: 'myhighstreet.uservoice.com', 
+	  forum: 'general', 
+	  alignment: 'left',
+	  background_color:'#f00', 
+	  text_color: 'white',
+	  hover_color: '#06C',
+	  lang: 'en'
+	})
+	</script>	
+</body>
+</html>
